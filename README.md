@@ -1,4 +1,4 @@
-## X-QUERYBOX - *The Element Query Web Component*
+## X-QUERYBOX - *An Element Query Web Component*
 
 ### How to use X-QUERYBOX
 
@@ -9,7 +9,7 @@
 #### Example Markup:
 
 ```HTML
-  <x-querybox media="query(small, (max-width: 300px) and (max-height: 300px))">
+  <x-querybox media="query(small-width, (max-width: 300px) and (max-height: 300px))">
 
     <ul>
       <li>One</li>
@@ -20,12 +20,20 @@
   </x-querybox>
 ```
 
+#### Example CSS:
+
+```CSS
+  x-querybox[matched-media~="small-width"] {
+    font-size: 50%; /* small text for a wee lil element! */
+  }
+```
+
 #### Adding `mediachange` Event Listeners:
 
 ```JS
   document.querySelector('x-querybox').addEventListener('mediachange', function(e){
     if (e.detail.indexOf('small') > -1) {
-      // the 'small' query is active, do some small stuff!
+      // the 'small-width' query is active, do some smally-widthy stuff!
     }
   });
 ```
