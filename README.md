@@ -32,7 +32,7 @@
 
 ```JS
   document.querySelector('x-querybox').addEventListener('mediachange', function(e){
-    if (e.detail.indexOf('small') > -1) {
+    if (e.detail.indexOf('small-width') > -1) {
       // the 'small-width' query is active, do some smally-widthy stuff!
     }
   });
