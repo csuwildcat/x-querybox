@@ -1,24 +1,31 @@
-# About
+# X-QUERYBOX - The Element Query Web Component
 
-This repo is an X-Tag custom web-component stub that can be used as a starting point when building new elements.  It provides that basic tools and grunt tasks to get started.
+# How to use X-QUERYBOX
 
-# Dev Setup
+1. Add the X-Tag Web Components library to your page
+2. Add the main.js amd main.css files located in /src to your page 
+3. Start having hyper-responsive, element query fun!
 
+## Example HTML:
+
+```HTML
+  <x-querybox media="query(small, (max-width: 300px))">
+
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+
+  </x-querybox>
 ```
-Fork this repo, rename it, then clone it.
 
-$ npm install	// install bower tasks
-$ bower install	// install components
-$ grunt build   // build the dependencies
+## Adding `mediachange` Listeners:
 
+```JS
+  document.querySelector('x-querybox').addEventListener('mediachange', function(e){
+    if (e.detail.indexOf('small') > -1) {
+      // the 'small' query is active, do some small stuff!
+    }
+  });
 ```
-
-# Links
-
-[X-Tags Docs](http://x-tags.org/docs)
-
-[Guide for creating X-Tag Components](https://github.com/x-tag/core/wiki/Creating-X-Tag-Components)
-
-[Using X-Tag components in your applications](https://github.com/x-tag/core/wiki/Using-our-Web-Components-in-Your-Application)
-
-
