@@ -6,7 +6,7 @@
 2. Add the main.js amd main.css files located in /src to your page 
 3. Start having hyper-responsive, element query fun!
 
-#### Example HTML:
+#### Example Markup:
 
 ```HTML
   <x-querybox media="query(small, (max-width: 300px) and (max-height: 300px))">
@@ -20,7 +20,7 @@
   </x-querybox>
 ```
 
-#### Adding `mediachange` Listeners:
+#### Adding `mediachange` Event Listeners:
 
 ```JS
   document.querySelector('x-querybox').addEventListener('mediachange', function(e){
